@@ -44,10 +44,10 @@ export const ListItem: React.FC<ListItemProps> = ({ label, handleRemoval, handle
             <span>{label}</span>
         </Label>
         <div>
-            <button onClick={() => handleEdit()}>
+            <button onClick={() => handleRemoval()}>
                 <TrashIcon />
             </button>
-            <button onClick={() => handleRemoval()}>
+            <button onClick={() => handleEdit()}>
                 <Pencil1Icon />
             </button>
         </div>
