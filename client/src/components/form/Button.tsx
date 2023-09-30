@@ -19,6 +19,7 @@ const StyledButton = styled.button<{ variant?: string}>`
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 `
 
 export const Button: FC<ButtonProps> = ({ children, type, onClick, variant }) => {
