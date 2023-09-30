@@ -2,7 +2,6 @@ import { FC, useState } from "react";
 import { Header } from "../header/Header";
 import { Form } from "./Form";
 import { useItemMutation } from "../../hooks/useItemsMutation";
-import { useQueryClient } from "@tanstack/react-query";
 import { useInvalidateItemsQuery } from "../../hooks/useInvalidateItemsQuery";
 
 export type HeaderFormToggleProps = {
