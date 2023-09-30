@@ -22,7 +22,16 @@ export const ListItemFormToggle: FC<ListItemFormToggleProps> = ({ id, label, han
     return (
       <>
         {!showForm && <ListItem label={label} handleRemoval={handleRemoval} handleEdit={toggleForm} />}
-        {showForm && <Form handleCancel={toggleForm} handleSubmit={(value: string) => mutation.mutate({ title: value, done: false })} initialValue={label} />}
+        {showForm && 
+          <Form
+            handleCancel={toggleForm}
+            handleSubmit={(value: string) => {
+              mutation.mutate({ title: value, done: false })
+              toggleForm()
+            }} 
+            initialValue={label} 
+          />
+        }
       </>
     );
   };

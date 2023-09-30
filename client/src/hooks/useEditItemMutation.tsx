@@ -5,7 +5,7 @@ export const useEditItemMutation = (onSuccess: () => void, id: number) => {
     const mutation = useMutation({
         mutationFn: (item: { title: string, done: boolean }) => {
             return fetch('http://localhost:3000/items/' + id, {
-                method: "POST",
+                method: "PUT",
                 headers: {
                     'Content-Type': 'application/json',
                 },
