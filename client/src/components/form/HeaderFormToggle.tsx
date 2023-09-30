@@ -3,15 +3,16 @@ import { Header } from "../header/Header";
 import { Form } from "./Form";
 import { useItemMutation } from "../../hooks/useItemsMutation";
 import { useQueryClient } from "@tanstack/react-query";
+import { useInvalidateItemsQuery } from "../../hooks/useInvalidateItemsQuery";
 
 export type HeaderFormToggleProps = {
     children: React.ReactNode;
 };
 
 export const HeaderFormToggle: FC<HeaderFormToggleProps> = ({ children }) => {
-    const queryClient = useQueryClient()
     const [showForm, setShowForm] = useState(false);
-    const { mutation } = useItemMutation(() => queryClient.invalidateQueries({ queryKey: ["items"]}), 'http://localhost:3000/items', "POST");
+    const { invalidate } = useInvalidateItemsQuery();
+    const { mutation } = useItemMutation(() => invalidate, 'http://localhost:3000/items', "POST");
   
     const toggleForm = () => {
       setShowForm(!showForm);

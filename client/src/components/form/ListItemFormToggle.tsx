@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import { ListItem } from "../list/ListItem";
 import { Form } from "./Form";
-import { useQueryClient } from "@tanstack/react-query";
-import { useItemMutation } from "../../hooks/useItemsMutation"
+import { useItemMutation } from "../../hooks/useItemsMutation";
+import { useInvalidateItemsQuery } from "../../hooks/useInvalidateItemsQuery";
 
 export type ListItemFormToggleProps = {
     id: number;
@@ -11,11 +11,11 @@ export type ListItemFormToggleProps = {
 };
 
 export const ListItemFormToggle: FC<ListItemFormToggleProps> = ({ id, label, done }) => {
-    const queryClient = useQueryClient()
+    const { invalidate } = useInvalidateItemsQuery();
     const [showForm, setShowForm] = useState(false);
-    const { mutation: editMutation } = useItemMutation(() => queryClient.invalidateQueries({ queryKey: ["items"]}), "http://localhost:3000/items/" + id, "PUT");
-    const { mutation: deleteMutation } = useItemMutation(() => queryClient.invalidateQueries({ queryKey: ["items"]}), "http://localhost:3000/items/" + id, "DELETE");
-    const { mutation: checkMutation } = useItemMutation(() => queryClient.invalidateQueries({ queryKey: ["items"]}), "http://localhost:3000/items/done/" + id, "PUT");
+    const { mutation: editMutation } = useItemMutation(() => invalidate, "http://localhost:3000/items/" + id, "PUT");
+    const { mutation: deleteMutation } = useItemMutation(() => invalidate, "http://localhost:3000/items/" + id, "DELETE");
+    const { mutation: checkMutation } = useItemMutation(() => invalidate, "http://localhost:3000/items/done/" + id, "PUT");
 
     const toggleForm = () => {
       setShowForm(!showForm);
