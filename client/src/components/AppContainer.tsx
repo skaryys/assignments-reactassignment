@@ -25,7 +25,10 @@ export const AppContainer: FC<PropsWithChildren> = () => {
                     </>
                 )}
             </List>
-            <Footer />
+            <Footer
+                todoItems={data?.filter((item: ItemType) => item.done === false).length}
+                doneItems={data?.filter((item: ItemType) => item.done === true).length}
+            />
         </Layout>
     )
 };
