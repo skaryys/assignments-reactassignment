@@ -3,6 +3,17 @@ const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
+//custom endpoint
+server.post("/items/:id/done", (req, res) => {
+  const item = db.items.find((item) => item.id === parseInt(req.params.id));
+  if (!item) {
+    res.status(404).send("Not found");
+  } else {
+    item.done = true;
+    item.finishedAt = Date.now();
+  }
+});
+
 server.use(middlewares);
 
 server.use(jsonServer.bodyParser);
@@ -13,7 +24,6 @@ server.use((req, res, next) => {
   }
   next();
 });
-
 // Use default router
 server.use(router);
 server.listen(3000, () => {
