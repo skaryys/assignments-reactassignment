@@ -9,8 +9,17 @@ const StyledDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    button {
+    > div > button {
         margin-left: 10px;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    &:hover {
+        > div > button {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 `;
 
