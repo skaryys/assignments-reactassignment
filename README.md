@@ -32,7 +32,7 @@ Using provided UI components, implement following modifications, bugfixes or new
 - [x] **B1**: Fix all bugs and visual imperfections you find
 - [x] **B2**: Fix layout of non-empty `List` component
 - [x] **B3**: Fix Layout component so the `Footer` is always attached to its bottom
-- [ ] **UI1**: Style `Header` so the button is aligned on the right
+- [x] **UI1**: Style `Header` so the button is aligned on the right
 - [ ] **UI2**: Style `ListItem` so action buttons are aligned on the right
 - [ ] **UI3**: Style `ListItem` so the action buttons are only visible when hovering over the item
 - [ ] **F1**: Modify `Footer` to show 0 when no value(s) were passed
