@@ -5,6 +5,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useState } from "react";
+import { HeaderFormToggle } from "./components/form/HeaderFormToggle";
 
 export const App: React.FC = () => {
     const [items, setItems] = useState([]);
@@ -13,7 +14,7 @@ export const App: React.FC = () => {
     <ThemeProvider>
         <Container>
             <Layout>
-                <Header handleAddItem={() => console.warn("unimplemented")}>To Do app</Header>
+                <HeaderFormToggle>To-Do app</HeaderFormToggle>
                 <List />
                 {items && items.length > 0 && (
                     <Footer />

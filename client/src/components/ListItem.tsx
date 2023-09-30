@@ -31,13 +31,13 @@ const Label = styled.label`
     }
 `;
 
-export type LiteItemProp = CheckboxProps & {
+export type ListItemProps = CheckboxProps & {
     label: string;
     handleEdit: () => void;
     handleRemoval: () => void;
 };
 
-export const ListItem: React.FC<LiteItemProp> = ({ label, handleRemoval, handleEdit, ...checkboxProps }) => (
+export const ListItem: React.FC<ListItemProps> = ({ label, handleRemoval, handleEdit, ...checkboxProps }) => (
     <StyledDiv>
         <Label>
             <Checkbox {...checkboxProps} />
