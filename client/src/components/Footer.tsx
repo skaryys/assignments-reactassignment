@@ -16,7 +16,7 @@ export type FooterProps = {
 };
 export const Footer: React.FC<FooterProps> = ({ todoItems, doneItems }) => (
     <StyledDiv>
-        <div>Todo: {todoItems}</div>
-        <div>Done: {doneItems}</div>
+        <div>Todo: {todoItems ?? 0}</div>
+        <div>Done: {doneItems ?? 0}</div>
     </StyledDiv>
 );
