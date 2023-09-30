@@ -10,5 +10,6 @@ export const Layout = styled.main`
     max-width: 600px;
     min-height: 50vh;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
 `;
