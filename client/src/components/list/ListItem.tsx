@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Checkbox } from "./Checkbox";
+import { Checkbox } from "../Checkbox";
 import { CheckboxProps } from "@radix-ui/react-checkbox";
 import { Pencil1Icon, TrashIcon } from "@radix-ui/react-icons";
 

@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { ListItem } from "../ListItem";
+import { ListItem } from "../list/ListItem";
 import { Form } from "./Form";
 
 export type ListItemFormToggleProps = {

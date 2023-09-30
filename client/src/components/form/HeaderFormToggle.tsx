@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { Header } from "../Header";
+import { Header } from "../header/Header";
 import { Form } from "./Form";
 
 export type HeaderFormToggleProps = {

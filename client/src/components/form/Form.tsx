@@ -6,6 +6,10 @@ import { CheckIcon, Cross1Icon } from "@radix-ui/react-icons";
 
 const StyledForm = styled.form`
     display: flex;
+    justify-content: space-between;
+    > div > button {
+        margin-left: 10px;
+    }
 `;
 
 export const Form = (props: FormProps): JSX.Element => {
@@ -22,12 +26,14 @@ export const Form = (props: FormProps): JSX.Element => {
             }}
         >
             <Input initialValue={props.initialValue} handleInputChange={(value: string) => setData(value)} />
-            <button type={"submit"}>
-                <CheckIcon />
-            </button>
-            <button type={"reset"}>
-                <Cross1Icon />
-            </button>
+            <div>
+                <button type={"submit"}>
+                    <CheckIcon />
+                </button>
+                <button type={"reset"}>
+                    <Cross1Icon />
+                </button>
+            </div>
         </StyledForm>
     );
 };
