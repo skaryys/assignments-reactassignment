@@ -20,7 +20,16 @@ export const HeaderFormToggle: FC<HeaderFormToggleProps> = ({ children }) => {
     return (
       <>
         {!showForm && <Header handleAddItem={toggleForm}>{children}</Header>}
-        {showForm && <Form handleCancel={toggleForm} handleSubmit={(value: string) => mutation.mutate({ title: value, done: false })} initialValue="" />}
+        {showForm &&
+          <Form
+            handleCancel={toggleForm}
+            handleSubmit={(value: string) => {
+              mutation.mutate({ title: value, done: false });
+              setShowForm(false);
+            }}
+            initialValue=""
+          />
+        }
       </>
     );
   };
