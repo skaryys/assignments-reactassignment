@@ -13,6 +13,9 @@ const StyledDiv = styled.div`
     > div:not(:last-child) {
         margin-bottom: 15px;
     }
+    > form:not(:last-child) {
+        margin-bottom: 15px;
+    }
 `;
 
 export const List: React.FC<PropsWithChildren> = ({ children }) => <StyledDiv>{children}</StyledDiv>;

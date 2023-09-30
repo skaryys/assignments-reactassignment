@@ -5,6 +5,7 @@ import { Input } from "./Input";
 import { CheckIcon, Cross1Icon } from "@radix-ui/react-icons";
 
 const StyledForm = styled.form`
+    width: 100%;
     display: flex;
     justify-content: space-between;
     > div > button {
