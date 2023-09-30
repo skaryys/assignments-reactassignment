@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Checkbox } from "../Checkbox";
 import { CheckboxProps } from "@radix-ui/react-checkbox";
 import { Pencil1Icon, TrashIcon } from "@radix-ui/react-icons";
+import { Button } from "../form/Button";
 
 const StyledDiv = styled.div`
     width: 100%;
@@ -44,12 +45,12 @@ export const ListItem: React.FC<ListItemProps> = ({ label, handleRemoval, handle
             <span>{label}</span>
         </Label>
         <div>
-            <button onClick={() => handleRemoval()}>
+            <Button onClick={() => handleRemoval()}>
                 <TrashIcon />
-            </button>
-            <button onClick={() => handleEdit()}>
+            </Button>
+            <Button onClick={() => handleEdit()}>
                 <Pencil1Icon />
-            </button>
+            </Button>
         </div>
     </StyledDiv>
 );

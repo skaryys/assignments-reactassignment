@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FormProps } from "./types";
 import { Input } from "./Input";
 import { CheckIcon, Cross1Icon } from "@radix-ui/react-icons";
+import { Button } from "./Button";
 
 const StyledForm = styled.form`
     width: 100%;
@@ -28,12 +29,12 @@ export const Form = (props: FormProps): JSX.Element => {
         >
             <Input initialValue={props.initialValue} handleInputChange={(value: string) => setData(value)} />
             <div>
-                <button type={"submit"}>
+                <Button type={"submit"}>
                     <CheckIcon />
-                </button>
-                <button type={"reset"}>
+                </Button>
+                <Button type={"reset"}>
                     <Cross1Icon />
-                </button>
+                </Button>
             </div>
         </StyledForm>
     );
