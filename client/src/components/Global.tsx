@@ -7,6 +7,6 @@ export const GlobalStyle = createGlobalStyle`
   ${normalize}
   ${reset}
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Rubik', sans-serif;
   }
 `;

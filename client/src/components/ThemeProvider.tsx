@@ -8,6 +8,7 @@ const theme = {
         ...olive,
         ...grass,
         ...blackA,
+        green: "#00BD8E",
     },
 };
 

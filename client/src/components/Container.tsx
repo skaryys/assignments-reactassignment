@@ -6,5 +6,8 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${(props) => props.theme.colors.olive1};
+    background-color: ${(props) => props.theme.colors.blackAA};
+    background-image: url("/bg_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 `;
