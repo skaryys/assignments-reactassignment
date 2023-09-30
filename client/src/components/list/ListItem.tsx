@@ -16,7 +16,7 @@ const StyledDiv = styled.div`
         opacity: 0;
         transition: opacity 0.3s;
     }
-    &:hover {
+    &:hover, &._hover {
         > div > button {
             visibility: visible;
             opacity: 1;
@@ -38,8 +38,8 @@ export type ListItemProps = CheckboxProps & {
     handleRemoval: () => void;
 };
 
-export const ListItem: React.FC<ListItemProps> = ({ label, handleRemoval, handleEdit, ...checkboxProps }) => (
-    <StyledDiv>
+export const ListItem: React.FC<ListItemProps> = ({ label, handleRemoval, handleEdit, className, ...checkboxProps }) => (
+    <StyledDiv className={className}>
         <Label>
             <Checkbox {...checkboxProps} />
             <span>{label}</span>

@@ -23,3 +23,10 @@ export const Done: Story = {
         checked: true,
     },
 };
+export const OnHover: Story = {
+    args: {
+        ...ToDo.args,
+        checked: false,
+    },
+    render: () => <ListItem label="Dolor sit amet" handleEdit={() => console.log("edit")} handleRemoval={() => console.log("removal")} className={"listitem _hover"} />
+}
