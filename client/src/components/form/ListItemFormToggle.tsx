@@ -7,7 +7,7 @@ export type ListItemFormToggleProps = {
     handleRemoval: () => void;
 };
 
-export const HeaderFormToggle: FC<ListItemFormToggleProps> = ({ label, handleRemoval }) => {
+export const ListItemFormToggle: FC<ListItemFormToggleProps> = ({ label, handleRemoval }) => {
     const [showForm, setShowForm] = useState(false);
   
     const toggleForm = () => {
