@@ -20,7 +20,7 @@ export const AppContainer: FC<PropsWithChildren> = () => {
                 ) : (
                     <>
                         {data.map((item: ItemType) => {
-                            return <ListItemFormToggle key={item.id} id={item.id} label={item.title} />
+                            return <ListItemFormToggle key={item.id} id={item.id} label={item.title} done={item.done} />
                         })}
                     </>
                 )}
