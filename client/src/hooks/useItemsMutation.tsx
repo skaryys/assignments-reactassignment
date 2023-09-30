@@ -1,11 +1,11 @@
 import { useMutation } from '@tanstack/react-query'
 
 
-export const useEditItemMutation = (onSuccess: () => void, id: number) => {
+export const useItemMutation = (onSuccess: () => void, url: string, method: string) => {
     const mutation = useMutation({
         mutationFn: (item: { title: string, done: boolean }) => {
-            return fetch('http://localhost:3000/items/' + id, {
-                method: "PUT",
+            return fetch(url, {
+                method: method,
                 headers: {
                     'Content-Type': 'application/json',
                 },
