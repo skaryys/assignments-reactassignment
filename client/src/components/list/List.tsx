@@ -6,9 +6,8 @@ const StyledDiv = styled.div`
     flex-direction: column;
     align-items: center;
     flex: 1 0 auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
     margin-top: 30px;
+    margin-bottom: 30px;
     > div:not(:last-child) {
         margin-bottom: 15px;
     }

@@ -8,6 +8,7 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 server.use((req, res, next) => {
   if (req.method === "POST") {
+    console.log(req.body);
     req.body.createdAt = Date.now();
   }
   next();
